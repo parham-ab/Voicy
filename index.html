@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="En">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="shortcut icon" href="/assets/img/Fav.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <title>Speech-To-Text</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Welcome To Speech-To-Text App</h1>
+      <div class="icons-container">
+        <i id="start" class="fa fa-microphone"></i>
+        <i id="stop" class="fa fa-microphone-slash"></i>
+        <i id="copy" class="fa fa-clipboard"></i>
+        <i
+          id="clear"
+          class="fa fa-trash-alt"
+          value="Clear"
+          onclick="{javascript:eraseText()}"
+        ></i>
+        <i id="speak" class="fa fa-volume-up"></i>
+      </div>
+      <div class="switch">
+        <div>
+          <label for="En">En</label>
+          <input type="radio" name="lang" class="lang" id="En" checked />
+        </div>
+        <div>
+          <label for="Fa">Fa</label>
+          <input type="radio" name="lang" class="lang" id="Fa" />
+        </div>
+      </div>
+      <div class="copy">
+        <textarea
+          placeholder="Your Text..."
+          id="textArea"
+          cols="30"
+          rows="15"
+        ></textarea>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Made with <span style="color: #b53636">❤</span> by
+        <a href="https://parham-portfolio.netlify.app/" target="_blank"
+          ><strong>Parham Abolghasemi</strong>
+        </a>
+      </p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
