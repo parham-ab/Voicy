@@ -67,7 +67,6 @@ body {
   color: #f14949;
   border-radius: 100%;
   padding: 10px;
-  margin: 5px;
   cursor: pointer;
 }
 #copy {
@@ -83,7 +82,7 @@ body {
 }
 /* input */
 #textArea {
-  margin: 50px 0 150px 0;
+  margin: 14px 0 150px 0;
   border: none;
   background-color: #e1e1e1;
   font-size: 1.2rem;

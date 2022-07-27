@@ -7,7 +7,6 @@ const speak = document.querySelector("#speak");
 const lang = document.querySelectorAll(".lang");
 const title = document.querySelector(".title");
 let data = [];
-
 // speech-to-text
 const recognition = new webkitSpeechRecognition();
 recognition.continuous = false;
@@ -66,7 +65,6 @@ textArea.addEventListener("input", function (e) {
     data = [];
   }
 });
-
 // info about the app
 title.addEventListener("click", function () {
   let speech = new SpeechSynthesisUtterance();
