@@ -5,6 +5,7 @@ const copyBtn = document.querySelector("#copy");
 const textArea = document.querySelector("#textArea");
 const speak = document.querySelector("#speak");
 const lang = document.querySelectorAll(".lang");
+const title = document.querySelector(".title");
 let data = [];
 
 // speech-to-text
@@ -64,4 +65,16 @@ textArea.addEventListener("input", function (e) {
   if (e.target.value == "") {
     data = [];
   }
+});
+
+// info about the app
+title.addEventListener("click", function () {
+  let speech = new SpeechSynthesisUtterance();
+  speech.lang = "en-US";
+  speech.text =
+    "welcome to voicy, this application is developed by paarhham abolghaaseme";
+  speech.volume = 1;
+  speech.rate = 1;
+  speech.pitch = 1;
+  window.speechSynthesis.speak(speech);
 });

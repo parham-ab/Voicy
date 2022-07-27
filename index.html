@@ -17,47 +17,90 @@
     <title>Speech-To-Text</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="title">Welcome To Voicy</h1>
-      <p>text to speech / speech to text app</p>
-      <div class="icons-container">
-        <i id="start" class="fa fa-microphone"></i>
-        <i id="stop" class="fa fa-microphone-slash"></i>
-        <i id="copy" class="fa fa-clipboard"></i>
-        <i
-          id="clear"
-          class="fa fa-trash-alt"
-          value="Clear"
-          onclick="{javascript:eraseText()}"
-        ></i>
-        <i id="speak" class="fa fa-volume-up"></i>
-      </div>
-      <div class="switch">
-        <div>
-          <label for="En">En</label>
-          <input type="radio" name="lang" class="lang" id="En" checked />
+    <!--  -->
+    <div class="background">
+      <div class="container">
+        <h1 class="title">Welcome To Voicy</h1>
+        <p>text to speech / speech to text app</p>
+        <div class="creator">
+          <p>
+            Made with <span id="love" style="color: #b53636">❤</span> by
+            <a href="https://parham-ab.netlify.app/" target="_blank"
+              ><strong>Parham Abolghasemi</strong>
+            </a>
+          </p>
         </div>
-        <div>
-          <label for="Fa">Fa</label>
-          <input type="radio" name="lang" class="lang" id="Fa" />
+        <div class="icons-container">
+          <i id="start" class="fa fa-microphone"></i>
+          <i id="stop" class="fa fa-microphone-slash"></i>
+          <i id="copy" class="fa fa-clipboard"></i>
+          <i
+            id="clear"
+            class="fa fa-trash-alt"
+            value="Clear"
+            onclick="{javascript:eraseText()}"
+          ></i>
+          <i id="speak" class="fa fa-volume-up"></i>
+        </div>
+        <div class="switch">
+          <div>
+            <label for="En">En</label>
+            <input type="radio" name="lang" class="lang" id="En" checked />
+          </div>
+          <div>
+            <label for="Fa">Fa</label>
+            <input type="radio" name="lang" class="lang" id="Fa" />
+          </div>
+        </div>
+        <div class="copy">
+          <textarea
+            placeholder="Your Text..."
+            id="textArea"
+            cols="30"
+            rows="15"
+          ></textarea>
         </div>
       </div>
-      <div class="copy">
-        <textarea
-          placeholder="Your Text..."
-          id="textArea"
-          cols="30"
-          rows="15"
-        ></textarea>
-      </div>
-    </div>
-    <div class="footer">
-      <p>
-        Made with <span style="color: #b53636">❤</span> by
-        <a href="https://parham-ab.netlify.app/" target="_blank"
-          ><strong>Parham Abolghasemi</strong>
-        </a>
-      </p>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <script src="app.js"></script>
   </body>
