@@ -32,6 +32,25 @@ recognition.onresult = (e) => {
   data = [...data, results];
   textArea.value = data.join(" ");
 };
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+document.onkeydown = function (e) {
+  if (e.keyCode == 123) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+    return false;
+  }
+};
 // text-to-speech
 speak.addEventListener("click", function () {
   let speech = new SpeechSynthesisUtterance();
@@ -51,7 +70,21 @@ copyBtn.addEventListener("click", function () {
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(textArea.value);
     /* Alert the copied text */
-    alert("Copied ✔👌");
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+    Toast.fire({
+      icon: "info",
+      title: "Text Copied ✔👌",
+    });
   }
 });
 // clear text, save last input changes
@@ -70,7 +103,7 @@ title.addEventListener("click", function () {
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en-US";
   speech.text =
-    "welcome to voicy, this application is developed by paarhham abolghaaseme";
+    "welcome to voicy, this application is developed by paarhham abolghaasemi";
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;

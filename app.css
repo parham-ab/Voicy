@@ -94,6 +94,7 @@ body {
 }
 .title {
   margin: 30px 0;
+  cursor: pointer;
 }
 /* creator */
 .creator {
