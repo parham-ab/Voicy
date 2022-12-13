@@ -13,9 +13,11 @@ recognition.continuous = false;
 // choose language
 lang[0].addEventListener("input", function () {
   recognition.lang = "en-US";
+  speak.style.display = "inline-block";
 });
 lang[1].addEventListener("input", function () {
   recognition.lang = "fa-IR";
+  speak.style.display = "none";
 });
 
 recognition.interimResults = false;
