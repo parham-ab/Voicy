@@ -79,6 +79,15 @@ body {
 }
 .switch {
   margin: 20px 0 0 0;
+  display: flex;
+}
+.switch div {
+  margin: 4px;
+}
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 /* input */
 #textArea {
