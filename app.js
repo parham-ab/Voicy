@@ -19,21 +19,28 @@ lang[1].addEventListener("input", function () {
   recognition.lang = "fa-IR";
   speak.style.display = "none";
 });
+lang[2].addEventListener("input", function () {
+  recognition.lang = "fr-FR";
+  speak.style.display = "none";
+});
 
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
-
+// start speak
 startBtn.addEventListener("click", () => {
   recognition.start();
 });
+// stop speak
 stopBtn.addEventListener("click", () => {
   recognition.stop();
 });
+// merge words
 recognition.onresult = (e) => {
   const results = e.results[0][0].transcript;
   data = [...data, results];
   textArea.value = data.join(" ");
 };
+// disabling inspect
 document.addEventListener("contextmenu", (e) => e.preventDefault());
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.onkeydown = function (e) {
@@ -66,10 +73,8 @@ speak.addEventListener("click", function () {
 // copy text
 copyBtn.addEventListener("click", function () {
   if (textArea.value) {
-    /* Select the text field */
     textArea.select();
-    textArea.setSelectionRange(0, 99999); /* For mobile devices */
-    /* Copy the text inside the text field */
+    textArea.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(textArea.value);
     /* Alert the copied text */
     const Toast = Swal.mixin({
