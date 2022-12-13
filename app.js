@@ -23,7 +23,10 @@ lang[2].addEventListener("input", function () {
   recognition.lang = "fr-FR";
   speak.style.display = "none";
 });
-
+lang[3].addEventListener("input", function () {
+  recognition.lang = "it_IT";
+  speak.style.display = "none";
+});
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 // start speak
@@ -109,8 +112,7 @@ textArea.addEventListener("input", function (e) {
 title.addEventListener("click", function () {
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en-US";
-  speech.text =
-    "welcome to voicy, this application is developed by paarhham abolghaasemi";
+  speech.text = "welcome to voicy";
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;
